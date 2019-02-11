@@ -13,8 +13,7 @@ class Event < ApplicationRecord
 
 	validates :description, presence: true, length: { in: 20..1000 }
 
-	validates :price, presence: true
-	validate :between_1_1000
+	validates :price, presence: true, numericality: { less_than_or_equal_to: 1000, more_than_or_equal_to: 1, only_integer: true }
 
 	validates :location, presence: true
 
@@ -26,16 +25,11 @@ class Event < ApplicationRecord
   end 
 
   def check_multiple_5
-    if duration % 4 != 0
+    if duration % 5 != 0
       errors.add(:duration, "duration must be a multiple of 5") 
     end
   end
 
-  def between_1_1000
-    unless price < 1001 && price > 0
-      errors.add(:price, "price must be between 1€ and 1000€") 
-    end
-  end
 
   
 end
