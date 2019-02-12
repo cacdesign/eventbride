@@ -1,0 +1,33 @@
+<div class="jumbotron">
+  <h1 class="display-4">Events list</h1>
+  <p class="lead">Next to you !</p>
+  <hr class="my-4">     
+   
+
+  <p>Well, let's create our first event :D ! <%= link_to "+", new_event_path, class:"btn btn-success" %></p>
+</div>
+
+
+<div class="row">
+
+<% @events.each_with_index do |event, index| %>
+ 
+  <div class="col-sm-4">
+    <div class="card" style="margin-bottom:10px">
+      <div class="card-body">
+        <h5 class="card-title"><%= event.title %> </h5> 
+        <hr class="my-4">  
+        <p class="card-text"><%= event.start_date %></p>
+        <p class="card-text"><%= event.duration %> minutes</p>
+        <p class="card-text"><%= event.price %> €</p>
+        <p class="card-text"><%= event.description %></p>
+        <%= link_to "See Detail", event_path(event), class:"btn btn-primary" %>
+     
+      </div>
+      <span style="color: #63987c;font-style: bold; padding-left: 13px;"><%=event.users.length%>  participants</span>
+       <span style="color: #63987c;font-style: bold; padding-left: 13px;">Créé par  <%=event.admin.first_name%></span>
+    </div>
+  </div>
+  
+  <%end%>
+</div>

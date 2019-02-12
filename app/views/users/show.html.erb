@@ -1,0 +1,32 @@
+<h1>Bonjour <%=current_user.first_name%> <%=current_user.last_name%>!</h1>
+<p><%=current_user.description%></p>
+<p><%=current_user.email%></p>
+<%= link_to "If you want to change your infos... Right here !", edit_user_registration_path %>
+
+<br>
+<h2> Voici les derniers événements que tu as créés </h2>
+<br>
+
+<div class="row">
+
+<% @events.each_with_index do |event, index| %>
+ 
+  <div class="col-sm-4">
+    <div class="card" style="margin-bottom:10px">
+      <div class="card-body">
+        <h5 class="card-title"><%= event.title %> </h5> 
+        <hr class="my-4">  
+        <p class="card-text"><%= event.start_date %></p>
+        <p class="card-text"><%= event.duration %> minutes</p>
+        <p class="card-text"><%= event.price %> €</p>
+        <p class="card-text"><%= event.description %></p>
+        <button type="button" class="btn btn-primary">See</button>
+     
+      </div>
+      <span style="color: #63987c;font-style: bold; padding-left: 13px;"><%=event.users.length%>  participants</span>
+       <span style="color: #63987c;font-style: bold; padding-left: 13px;">Créé par  <%=event.admin.first_name%></span>
+    </div>
+  </div>
+  
+  <%end%>
+</div>
