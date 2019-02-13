@@ -1,24 +1,30 @@
-# README
+# EventBrite from Max !  THP, Week 6
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ready to take part in the Eventbrite ? Made with weird code.
 
-Things you may want to cover:
+By Maxime 
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+* You'll have to practice the famous Bundle Install. 
+* Then a cool db:create.
+* You can now practice with a bad db:migrate!
+* Last but not least. A quick db:seed might create for you a few events
 
-* Configuration
+* Please create a new user and then a new event to run the app.
+  Go into the rails console for it! 
 
-* Database creation
+## Running the tests
 
-* Database initialization
+A coooooool Rspec des familles (which with any doubt, doesn't really work...)
 
-* How to run the test suite
+## Built With
 
-* Services (job queues, cache servers, search engines, etc.)
+* Love
+* Shit code
 
-* Deployment instructions
+## Prod version
 
-* ...
+* https://eventbridet.herokuapp.com
+
