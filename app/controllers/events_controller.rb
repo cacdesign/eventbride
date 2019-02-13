@@ -48,9 +48,6 @@ before_action :good_admin, only: [:edit, :update, :destroy]
 
   def destroy
   	@event = Event.find(params[:id])
-  	@event.attendances.each do |attendance|
-  		attendance.destroy
-  	end
   	@event.destroy
   	redirect_to events_path
   end

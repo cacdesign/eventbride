@@ -18,7 +18,7 @@ User.destroy_all
 
 # - Je crée mes users
 10.times do |index|
-	u = User.create(last_name: Faker::Name.last_name, first_name: Faker::Name.first_name, description: Faker::Shakespeare.hamlet_quote, email: "hihi@yopmail.com", encrypted_password:'password')
+	u = User.create(last_name: Faker::Name.last_name, first_name: Faker::Name.first_name, description: Faker::Shakespeare.hamlet_quote, email: "hihi@yopmail.com", password:'password')
 	p "L'utilisateur #{u.last_name} de #{u.first_name}ans a été crée"
 end
 
