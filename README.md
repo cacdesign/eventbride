@@ -1,4 +1,4 @@
-# EventBrite from Max !  THP, Week 6
+# EventBrite from Nico !  THP, Week 6
 
 Ready to take part in the Eventbrite ? Made with weird code.
 
