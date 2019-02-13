@@ -2,7 +2,7 @@
 
 Ready to take part in the Eventbrite ? Made with weird code.
 
-By Maxime 
+By Nicolas 
 
 ## Getting Started
 
