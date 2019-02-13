@@ -7,7 +7,7 @@ class AttendancesController < ApplicationController
 	  # Amount in cents
 	  puts @id = params[:event_id]
 	  puts @event = Event.find(@id)
-	  puts @amount = @event.price
+	  puts @amount = @event.price * 100
 
 	  customer = Stripe::Customer.create(
 	    :email => params[:stripeEmail],

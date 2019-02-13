@@ -1,0 +1,42 @@
+<%= form_for(:event, url: event_path(@event), html: {method:'PATCH'} ) do |f| %>
+    <div class="form-group">
+      <label>Start_date</label>
+      <%= f.text_field :start_date , class:'form-control'%>
+    </div>
+    <br><br>
+    <div class="form-group">
+      <label>Duration</label>
+      <%= f.text_field :duration , class:'form-control'%>
+    </div>
+    <br><br>
+    <div class="form-group">
+      <label>Title</label>
+      <%= f.text_field :title, class:'form-control'%>
+    </div>
+    <br><br>
+    <div class="form-group">
+      <label>Description</label>
+      <%= f.text_field :description, class:'form-control'%>
+    </div>
+    <br><br>
+    <div class="form-group">
+      <label>Price</label>
+      <%= f.text_field :price , class:'form-control'%>
+    </div>
+    <br><br>
+    <div class="form-group">
+      <label>Location</label>
+      <%= f.text_field :location , class:'form-control'%>
+    </div>
+    <br><br>
+
+
+<div class="form-group">
+    <button type="submit" class="btn btn-primary" > Edit</button>
+   
+</div>
+
+<%end%>
+
+
+<%= link_to "Delete", event_path(@event), method: "DELETE", class:"btn btn-danger" %>

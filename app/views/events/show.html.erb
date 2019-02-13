@@ -23,7 +23,7 @@
 		  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 		          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
 		          data-description="A month's subscription"
-		          data-amount="500"
+		          data-amount= <%=@event.price * 100%>
 		          data-currency="eur"
 		          data-locale="auto"></script>
 		<% end %>   
@@ -51,6 +51,12 @@
 		  
 		 
 		</div>
+
+	<% if current_user == @event.admin %>
+
+		<%= link_to "Event Settings", event_participations_path(@event), class:"btn btn-primary" %>
+
+	<% end %>  
 
 	  
 </div>

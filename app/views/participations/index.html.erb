@@ -1,0 +1,17 @@
+<h1>Participations#index</h1>
+
+
+<% @event.attendances.each do |attendance| %>
+ 
+  <div class="col-sm-4">
+    <div class="card" style="margin-bottom:10px">
+      <div class="card-body">
+        <h5 class="card-title"><%= attendance.user.first_name %> </h5> 
+        <hr class="my-4">  
+        <p class="card-text"><%= attendance.user.last_name %></p>
+        <p class="card-text"><%= attendance.user.email %> minutes</p>
+      </div>
+    </div>
+<%end%>
+
+<%= link_to "Edit Event", edit_event_path(@event), class:"btn btn-primary" %>
