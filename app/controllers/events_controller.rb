@@ -28,6 +28,7 @@ before_action :authenticate_user!, only: [:new]
 
 
 
+
 private
 
   def post_params

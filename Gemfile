@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
+gem 'stripe'
 gem 'devise'
 gem 'table_print'
 gem 'faker'
@@ -48,6 +49,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'dotenv-rails'
 end
 
 group :development do
